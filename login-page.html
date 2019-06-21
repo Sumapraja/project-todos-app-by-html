@@ -3,19 +3,25 @@
 
 <head>
     <title> EFX ToDo App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./login-page.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One|Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- header start -->
     <div class="header">
-        <span>EFX</span>
-        <span>ToDo</span>
-        <span>App</span>
+        <div class="d-flex flex-row bd-highlight">
+            <div class="bd-highlight">EFX</div>
+            <div class="bd-highlight">ToDo</div>
+            <div class="bd-highlight">App</div>
+        </div>
     </div>
     <!-- header end -->
 
     <!-- title start-->
-    <span class="title">EFX</span>
+    <div class="title">EFX</div>
     <!-- title end -->
 
     <!-- sign in section input start -->
@@ -28,9 +34,10 @@
 
     <!-- sign up section start -->
     <div class="sign-up-section">
-        <span class="sign-up-text"> new here? </span> <br>
+        <div class="sign-up-text"> new here? </div>
         <button class="sign-up-button"> SIGN UP </button> <br>
-        <button class="sign-in-google-button"> SIGN IN WITH GOOGLE <img src="#" alt="google.png" />
+        <button class="sign-in-google-button"> SIGN IN WITH GOOGLE <img class="google-image" src="./images/google.png"
+                alt="google.png" />
         </button> <br>
     </div>
     <!-- sign up section end-->
