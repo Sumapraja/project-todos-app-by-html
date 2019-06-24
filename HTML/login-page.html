@@ -3,10 +3,13 @@
 
 <head>
     <title> EFX ToDo App</title>
+    <meta name="google-signin-client_id"
+        content="511812641984-qg1aa05nfi9552kfg7jnqe66b3rjeba6.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../CSS/login-page.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One|Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -39,6 +42,18 @@
         <button class="sign-in-google-button"> SIGN IN WITH GOOGLE <img class="google-image" src="../images/google.png"
                 alt="google.png" />
         </button> <br>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+            }
+        </script>
     </div>
     <!-- sign up section end-->
 
